@@ -17,6 +17,7 @@ namespace MarchingCubes.Examples
         /// The heightmap terrain generation settings
         /// </summary>
         public HeightmapTerrainSettings HeightmapTerrainSettings => heightmapTerrainSettings;
+        [SerializeField] private Vector3 worldPosition;
 
         private void Awake()
         {
@@ -53,6 +54,9 @@ namespace MarchingCubes.Examples
                     }
                 }
             }
+
+
+            transform.position = worldPosition;
         }
 
         /// <summary>
@@ -62,7 +66,7 @@ namespace MarchingCubes.Examples
         /// <returns>The instantiated chunk</returns>
         private HeightmapChunk CreateChunk(int3 chunkCoordinate)
         {
-            HeightmapChunk chunk = Instantiate(ChunkPrefab, (chunkCoordinate * ChunkSize).ToVectorInt(), Quaternion.identity).GetComponent<HeightmapChunk>();
+            HeightmapChunk chunk = Instantiate(ChunkPrefab, (chunkCoordinate * ChunkSize).ToVectorInt(), Quaternion.identity, transform).GetComponent<HeightmapChunk>();
             chunk.name = $"Chunk_{chunkCoordinate.x}_{chunkCoordinate.y}_{chunkCoordinate.z}";
             chunk.World = this;
             chunk.Initialize(ChunkSize, Isolevel, chunkCoordinate);

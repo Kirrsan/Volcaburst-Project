@@ -265,13 +265,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592448622}
-  m_LocalRotation: {x: 0.1510886, y: 0.43167996, z: -0.07359457, w: 0.8862328}
+  m_LocalRotation: {x: 0.14071429, y: 0.53898317, z: -0.09188805, w: 0.82538074}
   m_LocalPosition: {x: -5.466847, y: 62.15784, z: -1.140511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 19.35, y: 51.941, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.35, y: 66.29, z: 0}
 --- !u!114 &592448626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,8 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 30
   sensitivity: 3
-  minimumFieldOfView: 2
-  maximumFieldOfView: 170
+  minimumFieldOfView: 15
+  maximumFieldOfView: 100
   zoomSpeed: 3
 --- !u!114 &592448627
 MonoBehaviour:
@@ -302,12 +302,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftClickAddsTerrain: 1
-  deformSpeed: 0.1
+  deformSpeed: 0.008
   deformRange: 1.5
   maxReachDistance: Infinity
   flatteningKey: 306
   world: {fileID: 1868798679}
   playerCamera: {fileID: 592448625}
+--- !u!1001 &806474977
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: heightmapTerrainSettings.heightmap
+      value: 
+      objectReference: {fileID: 2800000, guid: a68627aa34364e44ab362d1f926df05a, type: 3}
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: heightmapTerrainSettings.heightOffset
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: chunkSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: chunkPrefab
+      value: 
+      objectReference: {fileID: 2787238630475463326, guid: fa134b7d4b4471841a0b22d147b6720c,
+        type: 3}
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: worldPosition.x
+      value: 27.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: worldPosition.z
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538597, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_Name
+      value: Heightmap World (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538597, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eea1f03f8e24f294dbf91dd235177e1f, type: 3}
 --- !u!1001 &1311378069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,6 +429,16 @@ PrefabInstance:
         type: 3}
       propertyPath: heightmapTerrainSettings.heightOffset
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: worldPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511563785240538596, guid: eea1f03f8e24f294dbf91dd235177e1f,
+        type: 3}
+      propertyPath: worldPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7511563785240538597, guid: eea1f03f8e24f294dbf91dd235177e1f,
         type: 3}

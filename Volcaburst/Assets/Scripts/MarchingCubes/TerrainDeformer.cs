@@ -69,6 +69,7 @@ namespace MarchingCubes.Examples
 
         private void Update()
         {
+
             if (deformSpeed <= 0)
             {
                 Debug.LogWarning("Deform Speed must be positive!");
@@ -85,11 +86,11 @@ namespace MarchingCubes.Examples
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Vector3 startP = playerCamera.position;
-                    Vector3 destP = startP + playerCamera.forward;
-                    Vector3 direction = destP - startP;
+                    //Vector3 startP = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    //Vector3 destP = startP + playerCamera.forward;
+                    //Vector3 direction = destP - startP;
 
-                    var ray = new Ray(startP, direction);
+                    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                     if (!Physics.Raycast(ray, out RaycastHit hit, maxReachDistance)) { return; }
                     _isFlattening = true;
@@ -130,7 +131,7 @@ namespace MarchingCubes.Examples
         /// </summary>
         private void FlattenTerrain()
         {
-            var result = Utils.PlaneLineIntersection(_flatteningOrigin, _flatteningNormal, playerCamera.position, playerCamera.forward, out float3 intersectionPoint);
+            var result = Utils.PlaneLineIntersection(_flatteningOrigin, _flatteningNormal, Camera.main.ScreenToWorldPoint(Input.mousePosition), playerCamera.forward, out float3 intersectionPoint);
             if (result != PlaneLineIntersectionResult.OneHit) { return; }
 
             int intRange = (int)math.ceil(deformRange);
