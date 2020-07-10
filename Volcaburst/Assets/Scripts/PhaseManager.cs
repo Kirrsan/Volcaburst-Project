@@ -66,5 +66,6 @@ public class PhaseManager : MonoBehaviour
         GameStateEnum.gameStateEnum = GameStateEnum.GAMESTATE.Loose;
         LooseObject.SetActive(false);
         ScoringManager.nbDeath++;
+        ScoringManager.LooseCheck();
     }
 }

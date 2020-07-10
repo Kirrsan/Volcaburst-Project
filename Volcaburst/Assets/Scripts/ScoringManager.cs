@@ -6,13 +6,13 @@ public class ScoringManager : MonoBehaviour
 {
 
     static public int nbDeath = 0;
-    public GameObject[] entitiesAlive;
-    public GameObject[] entitiesKilled;
+    public List<GameObject> entitiesAlive;
+    public List<GameObject> entitiesKilled;
     public float timeElapsed = 0.0f;
     
     void Update()
     {
-        LooseCheck();
+        
 
         if (GameStateEnum.gameStateEnum == GameStateEnum.GAMESTATE.InGameFluid)
         {
@@ -24,7 +24,7 @@ public class ScoringManager : MonoBehaviour
         }
     }
 
-    private void LooseCheck()
+    public static void LooseCheck()
     {
         if(nbDeath >= 3)
         {
@@ -36,6 +36,6 @@ public class ScoringManager : MonoBehaviour
 
     private void EntitiesScoring()
     {
-        // Calcul de la partie scoring vis-à-vis des entités présentent dans les deux tableaux
+        // Calcul de la partie scoring vis-à-vis des entités présentes dans les deux tableaux
     } 
 }
