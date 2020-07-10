@@ -5073,6 +5073,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &587274593 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7511563785240538603, guid: eea1f03f8e24f294dbf91dd235177e1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311378069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &592448622
 GameObject:
   m_ObjectHideFlags: 0
@@ -5310,6 +5316,7 @@ GameObject:
   - component: {fileID: 817696619}
   - component: {fileID: 817696618}
   - component: {fileID: 817696617}
+  - component: {fileID: 817696620}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5358,6 +5365,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &817696620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817696616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc571498ea9c07f438e1cb2f1599df20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save:
+    level: 0
+    time: 0
+    numberOfVictories: 0
+    numberOfLosses: 0
+    terrainHasChanged: 0
+  terrain: {fileID: 587274593}
+  densitiesSaved: {fileID: 11400000, guid: 09c1d234fb5ba6c4db8d16a7b2d0302e, type: 2}
 --- !u!1 &1002072610
 GameObject:
   m_ObjectHideFlags: 0

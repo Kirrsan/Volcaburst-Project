@@ -81,7 +81,7 @@ namespace MarchingCubes.Examples
         public NativeArray<float> Densities
         {
             get => _densities;
-            private set => _densities = value;
+            set => _densities = value;
         }
 
         /// <summary>
